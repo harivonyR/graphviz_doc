@@ -1,0 +1,480 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="">
+    </head>
+
+<body>
+    <style>
+        .deco-none li,.deco-none{
+            list-style: none;
+        }
+        
+        li{
+            margin: 10px 0;
+        }
+        
+        .card{
+            width: auto;
+            padding: 10px 20px;
+        }
+        
+        .logo-group{
+            width: 100%;
+            margin: 100px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo-item{
+            padding-right:10px;
+        }
+        
+        .logo-item img{
+            width: 100px;
+            margin-right: 100px;
+        }
+        .misa{
+            width: 50px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .text-right{
+            text-align: right;
+        }
+        
+        .underlined{
+            text-decoration: underline;
+        }
+
+        .code{
+        padding: 2px 5px;
+        background-color: black;
+        color: chartreuse;
+        }
+        
+        .about-me{
+            margin-top: 200px;
+        }
+        
+        .container{
+            display: relative;
+            left: -100px;
+            width: 700px;
+            margin: auto;
+            
+        }
+        
+        .container-item{
+            width: 100%;
+            padding: 20px 0px;
+        
+        }
+        ul{
+            display: inline-block;
+            max-width: 70%;
+        }
+        
+        p{
+            display: inline-block;
+            width: 500px;
+        }
+        
+        .res{
+            border: solid 3px darkgray;
+            border-radius: 10px;
+            margin-top: 50px;
+            padding-bottom: 3rem;
+        }
+        
+        .res-title{
+            display: inline-block;
+            position: relative;
+            top : -37px;
+            left: 20px;
+            background-color: white;
+            padding: 5px 10px;
+        }
+        
+        .res-graph{
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .graph-item{
+            display: inline-block;
+            max-width: 40%;
+        }
+        
+        .res-info{
+            width: 100%;
+            padding: 20px;
+            padding-left: 70px;
+        }
+        
+        
+        
+        
+    </style>
+    <div class="container">
+        <div class="card univ">
+            <ul class="deco-none">
+                <li>UNIVERSITE D'ANTANANARIVO</li>
+                <li>FACUILTE DES SCIENCE</li>
+                <li>--------------------------</li>
+                <li>Mathématiques Informatique et <br> 
+                    Statistiques Appliquées</li>
+            </ul>
+        </div>
+
+        <div class="title">
+            <div class="logo-group">
+                <div class="logo-item">
+                    <img src="img/univ_tana.png" alt="Logo Univ Tana">
+                </div>
+                <div class="logo-item">
+                    <img src="img/fac_science.jpeg" alt="logo fac science">
+                </div>
+                <div class="logo-item misa">
+                    <img src="img/logo_misa.png" alt="logo misa">
+                </div>
+            </div>
+            <div class="title text-center">
+                <h1 class="text-center">- GRAPHVIZ -</h1>
+                <h2 class="text-center">Construction de graphe <br>et<br> 
+                    Matrice d'adjascence
+                </h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <ul class="text-right about-me deco-none">
+                <li>RATEFIARISON Harivony Lalatiana</li>
+                <li>harivonyratefiarison@gmail.com</li>
+                <li>+261 34 93 851 83</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="container-item">
+            <h2 class="underlined">I - Généralité sur Graphviz</h2>
+            <p>GRAPHVIZ est un outil utilisé pour representer des graphes de toute sortes.</p>
+            <h3 class="underlined">Representer un graphe :</h3>
+            <ul>
+                <li>
+                    Avec ubuntu, l'installation s'effectue avec le commande <span class="code">$ sudo apt-get install graphviz </span>
+                </li>
+                <li>
+                    On crée un fichier d'extension .gv ou on va écrire notre commande en language dot
+                </li>
+                <li>
+                    <span class="underlined">Exemple pour l'exercice 1 : </span>
+
+                </li>
+                <li class="deco-none"><img src="img/code_g1.png" alt="code graphviz g1"></li>
+                <li>Finallement, le commande à executer pour l'exportation en png : <span class="code">$ dot -Tpng graph.gv -o g1.png</span></li>
+                <li >Resulat :</li>
+                <li class="deco-none"><img src="img/res_g1.png" alt="" ><figcaption><i>Fig :</i> g1.png</figcaption></li>
+            </ul>
+            
+        
+        </div>
+
+        <div class="container-item">
+            <h2 class="underlined">II - Application</h2>
+            <div class="container-item">
+                <h3 class="underlined">a - Présentation :</h3>
+                
+                <p>
+                    Nous avons 6 graphes en disposition dont nous allons : <br>
+                    <ol>
+                        <li>Reproduire en utilisant l'outil graphviz</li>
+                        <li>Representer le profil</li>
+                        <li>Calculer la dimension pour les matrice symetriques</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="container-item">
+                <h3 class="underlined">b - Définition :</h3>
+                <ul>
+                    <li>
+                        Graph :
+                        <p>
+                        </p>
+                    </li>
+                    
+                    <li>Matrice d'adjacence : <br>
+                        <p>La matrice d'adjacence sert à réprésenter les rélations entre chaque couple de sommet de la graphe.
+
+                            Soit G une graphe orienté ou non.
+                            La matrice d'adjacence A = `(a_(i,j))` de G est telle que : <br> `a_(i,j)= {[1 text( si les sommets i et j sont connectés)],[0 text( sinon)]:}`
+                            </p>
+                    </li>
+                    <li> Profil d'un graph :
+                            <p>
+
+                            </p>
+                    </li>
+                    <li>
+                        Dimension :
+                        <p>
+
+                        </p>
+                    </li>
+                </ul>
+                
+                
+            </div>
+            <div class="container-item">
+                <h3 class="underlined">c - Notations :</h3>
+                <p>Dans la suite, on adoptera les notations suivantes:
+                    <ul>
+                        <li>`A_i`: Matrice d'adjacence de la graphe `g_i`</li>
+                        <li>`M_i`: Rangement profil de la matrice `A_i`</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="container-item">
+                <h3 class="underlined">d - Réponse aux exercices :</h3>
+                
+                <!-- reponse g1-->
+
+                <div class="res">
+                    <h3 class="res-title">g1</h3>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3>Le code dans graphviz :</h3>
+                            <img src="img/code_g1.png" alt="">
+                        </div>
+                        <div class="graph-item">
+                            <h3>Fichier de sortie :</h3>
+                            <img src="img/res_g1.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="res-info">
+                        
+                        <h3>Commentaire :</h3>
+                        
+                        <ul>
+                            <li>On a utiliser rankdir ="LR" pour spécifier le sens d'orientations du graphe, "LR" pour Left to Right</li>
+                            <li>Avec layout="neato", on utilise le mode d'affichage spécifique de neato</li>
+                            <li>On peut aussi changer de couleur des arrêtes avec edge [color=blue]</li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3 class="underlined">Profil et dimension :</h3>
+                            `Profil(A_1) = {(1,1),(2,1),(2,2),(3,1),(3,2),(3,3),(4,2),(4,3),(4,4),(5,3),(5,4),(5,5)}`
+                            `dim(Profil(A_1))=12`
+                            <br>
+                            `M_1=([1,,,,],[1,1,,,],[1,1,1,,],[,1,0,1,],[,,1,1,1])`</div>
+                        
+                        <div class="graph-item">
+                            <h3 class="underlined">Matrice d'adjacence :</h3>
+                            `A_1=``([1,1,1,0,0],[1,1,1,1,0],[1,1,1,0,1],[0,1,0,1,1],[0,0,1,1,1])`
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin reponse g1-->
+
+                <!-- reponse g2-->
+                <div class="res">
+                    <h3 class="res-title">g2</h3>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3>Le code dans graphviz :</h3>
+                            <img src="img/code_g2.png" alt="">
+                        </div>
+                        <div class="graph-item">
+                            <h3>Fichier de sortie :</h3>
+                            <img src="img/res_g2.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="res-info">
+                        
+                        <h3>Commentaire :</h3>
+                        
+                        <ul>
+                            <li>On utilise digraph au lieu de graph pour les graph orienté</li>
+                            <li>Ici, on a utilisé `a [pos="x,y!"]`</li> pour positionner le noeud en (x,y) 
+                            <li>'[dir="both"] : indique au flèche d'indiquer les deux directions </li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3 class="underlined">Profil et dimension :</h3>
+                            
+                            `Profil(A_2) = {}`
+                            `dim(Profil(A_1))=12`
+                            `M_2=([1,,,,],[1,1,,,],[1,1,1,,],[,1,0,1,],[,,1,1,1])`
+                            
+                        </div>
+                        
+                        <div class="graph-item">
+                            <h3 class="underlined">Matrice d'adjacence :</h3>
+                            `A_2=``([1,1,0,0],[0,1,1,0],[0,1,0,1],[1,1,1,1])`
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin reponse g2-->
+
+                <!-- reponse g3-->
+                <div class="res">
+                    <h3 class="res-title">g3</h3>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3>Le code dans graphviz :</h3>
+                            <img src="img/code_g3.png" alt="">
+                        </div>
+                        <div class="graph-item">
+                            <h3>Fichier de sortie :</h3>
+                            <img src="img/res_g3.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="res-info">
+                        
+                        <h3>Commentaire :</h3>
+                        
+                        <ul>
+                            <li>On utilise digraph au lieu de graph pour les graphes orientés</li>
+                            <li>Ici, on a utilisé `a [pos="x,y!"]`</li> pour positionner le noeud 'a' en (x,y) 
+                            <li>'[dir="both"] : indique au flèche d'indiquer les deux directions </li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3 class="underlined">Profil et dimension :</h3>
+                            
+                            `Profil(A_2) = {}`
+                            `dim(Profil(A_1))=12`
+                            `M_2=([1,,,,],[1,1,,,],[1,1,1,,],[,1,0,1,],[,,1,1,1])`
+                            
+                        </div>
+                        
+                        <div class="graph-item">
+                            <h3 class="underlined">Matrice d'adjacence :</h3>
+                            `A_3=``([1,1,0,0],[0,1,1,0],[0,1,0,1],[0,1,1,1])`
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin reponse g3-->
+
+                <!-- reponse g4-->
+                <div class="res">
+                    <h3 class="res-title">g4</h3>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3>Le code dans graphviz :</h3>
+                            <img src="img/code_g4.png" alt="">
+                        </div>
+                        <div class="graph-item">
+                            <h3>Fichier de sortie :</h3>
+                            <img src="img/res_g4.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="res-info">
+                        
+                        <h3>Commentaire :</h3>
+                        
+                        <ul>
+                            <li>On utilise graph au lieu de digraph pour les graphesnon-orientés</li>
+                            <li>Ici, on a utilisé `a [pos="x,y!"]`</li> pour positionner le noeud 'a' en (x,y) 
+                        
+                        </ul>
+                        
+                    </div>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3 class="underlined">Profil et dimension :</h3>
+                            <ul>
+                                <li>`Profil(A_4) = {(1,1),(2,1),(2,2),(3,2),(3,3),<br>(4,2),(4,3),(4,4)}`</li>
+                                <li>`dim(Profil(A_4))=8`</li>
+                                <li>`M_4=([1,,,],[1,1,,],[,1,1,],[,1,1,1])`</li>
+                            </ul>
+                
+                            
+                        </div>
+                        
+                        <div class="graph-item">
+                            <h3 class="underlined">Matrice d'adjacence :</h3>
+                            `A_4=``([1,1,0,0],[1,1,1,1],[0,1,1,1],[0,1,1,1])`
+                
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin reponse g4-->
+                
+                <!-- reponse g5-->
+                <div class="res">
+                    <h3 class="res-title">g5</h3>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3>Le code dans graphviz :</h3>
+                            <img src="img/code_g5.png" alt="">
+                        </div>
+                        <div class="graph-item">
+                            <h3>Fichier de sortie :</h3>
+                            <img src="img/res_g5.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="res-info">
+                        
+                        <h3>Commentaire :</h3>
+                        
+                        <ul>
+                            <li>On utilise graph au lieu de digraph pour les graphesnon-orientés</li>
+                            <li>Ici, on a utilisé `a [pos="x,y!"]`</li> pour positionner le noeud 'a' en (x,y) 
+                        
+                        </ul>
+                        
+                    </div>
+
+                    <div class="res-graph">
+                        <div class="graph-item">
+                            <h3 class="underlined">Profil et dimension :</h3>
+                            <ul>
+                                <li>`Profil(A_5) = {(1,1),(2,1),(2,2),(3,1),``(3,2),(3,3),(4,3),(4,4),``(5,1),(5,2),(5,3),(5,4),(5,5)}`</li>
+                                <li>`dim(Profil(A_5))=13`</li>
+                                <li>`M_5=([1,,,,],[1,1,,,],[1,0,1,,],[,,1,1,],[1,1,0,1,1])`</li>
+                            </ul>
+                
+                            
+                        </div>
+                        
+                        <div class="graph-item">
+                            <h3 class="underlined">Matrice d'adjacence :</h3>
+                            `A_4=``([1,1,0,0],[1,1,1,1],[0,1,1,1],[0,1,1,1])`
+                
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin reponse g4-->
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
